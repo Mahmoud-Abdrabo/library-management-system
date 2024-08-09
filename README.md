@@ -2,8 +2,6 @@
 
 Welcome to the **Library Management System**! This application is built using **Spring Boot** and provides a RESTful API for managing books, patrons, and borrowing records in a library.
 
-&nbsp;
-
 ## 📋 Table of Contents
 
 - [Features](#-features)
@@ -15,16 +13,12 @@ Welcome to the **Library Management System**! This application is built using **
 - [Technology Stack](#-technology-stack)
 - [License](#-license)
 
-&nbsp;
-
 ## ✨ Features
 
 - **Book Management**: Add, update, and delete books.
 - **Patron Management**: Add, update, and delete patrons.
 - **Borrowing Records**: Track which patrons have borrowed which books, including borrow and return dates.
 - **Global Exception Handling**: Structured error responses with detailed messages.
-
-&nbsp;
 
 ## 🚀 Getting Started
 
@@ -64,8 +58,6 @@ Before you begin, ensure you have the following installed:
     mvn clean install
     ```
 
-&nbsp;
-
 ## 🏃 Running the Application
 
 You can run the application in several ways:
@@ -91,8 +83,6 @@ Once the application is running, access it at:
 ```bash
 http://localhost:8080/
 ```
-
-&nbsp;
 
 ## 🌐 API Endpoints
 
@@ -296,8 +286,6 @@ PUT /api/return/{bookId}/patron/{patronId}
 
 Request Body: JSON representation contains the return date.
 
-&nbsp;
-
 ## 🔒 Security Configuration
 
 The application utilizes Spring Security to ensure robust security measures. Here’s an overview of the security setup:
@@ -319,8 +307,6 @@ The application utilizes Spring Security to ensure robust security measures. Her
 ### 🚫 Cross-Site Request Forgery (CSRF)
 - CSRF Protection: CSRF protection is disabled for simplicity in local development. Ensure to enable CSRF protection in production environments for enhanced security.
 
-&nbsp;
-
 ## ❗ Exception Handling
 
 The application uses a global exception handler to manage errors gracefully. The following are the custom exceptions used:
@@ -329,8 +315,6 @@ The application uses a global exception handler to manage errors gracefully. The
 - BadRequestException: Returns a 400 status for bad requests.
 - Generic Exception: Returns a 500 status for all other unhandled exceptions.
 
-&nbsp;
-
 ## 💻 Technology Stack
 
 - Java 22
@@ -338,8 +322,6 @@ The application uses a global exception handler to manage errors gracefully. The
 - Hibernate/JPA
 - MySQL (or any other relational database)
 - Maven for dependency management
-
-&nbsp;
 
 ## 📜 License
 
