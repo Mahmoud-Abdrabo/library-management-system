@@ -18,6 +18,7 @@ Welcome to the **Library Management System**! This application is built using **
 - **Book Management**: Add, update, and delete books.
 - **Patron Management**: Add, update, and delete patrons.
 - **Borrowing Records**: Track which patrons have borrowed which books, including borrow and return dates.
+- **Security**: HTTP basic JDBC Authentication and role-based Authorization.
 - **Global Exception Handling**: Structured error responses with detailed messages.
 
 ## 🚀 Getting Started
