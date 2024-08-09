@@ -9,6 +9,7 @@ Welcome to the **Library Management System**! This application is built using **
 - [Running the Application](#-running-the-application)
 - [API Endpoints](#-api-endpoints)
 - [Security Configuration](#-security-configuration)
+- [Unit Testing](#-unit-testing)
 - [Exception Handling](#-exception-handling)
 - [Technology Stack](#-technology-stack)
 - [License](#-license)
@@ -307,6 +308,32 @@ The application utilizes Spring Security to ensure robust security measures. Her
 
 ### 🚫 Cross-Site Request Forgery (CSRF)
 - CSRF Protection: CSRF protection is disabled for simplicity in local development. Ensure to enable CSRF protection in production environments for enhanced security.
+
+## 🧪 Unit Testing
+
+The Library Management System application includes a comprehensive suite of unit tests to ensure the functionality of the API endpoints. These tests are designed to validate key operations across the core entities of the system: **Books**, **Patrons**, and **Borrowing Records**.
+
+### 🛠️ Testing Tools and Frameworks
+
+- **JUnit 5**: Used for writing and executing test cases.
+- **Spring Boot Test**: Provides testing support for Spring Boot applications.
+- **MockMvc**: Facilitates testing of Spring MVC controllers by simulating HTTP requests and verifying responses.
+- **Mockito**: Used to mock the service layer dependencies, enabling isolated testing of controllers.
+- **Jackson ObjectMapper**: Helps in serializing and deserializing JSON objects within the tests.
+
+### 🚀 How to Run the Tests
+
+- **Ensure Your Environment is Set Up**: Make sure that your development environment is properly configured with the required dependencies. This includes having Maven and JDK installed, as well as setting up the necessary database configurations.
+- **Run Tests via Maven**:
+    - Execute the following command in the terminal to run all tests:
+        ```bash
+        mvn test
+        ```
+    - Alternatively, you can use your IDE's built-in testing features to run the test suite.
+
+- **Verify Test Results**: After executing the tests, Maven will provide a summary of the results. Ensure that all tests pass successfully. If any tests fail, review the detailed logs to identify and resolve issues.
+
+
 
 ## ❗ Exception Handling
 
