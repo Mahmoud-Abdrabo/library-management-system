@@ -46,6 +46,4 @@ public class BorrowingRecord {
         this.book = book;
         this.patron = patron;
     }
-
-
 }
