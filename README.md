@@ -2,15 +2,20 @@
 
 Welcome to the **Library Management System**! This application is built using **Spring Boot** and provides a RESTful API for managing books, patrons, and borrowing records in a library.
 
+&nbsp;
+
 ## 📋 Table of Contents
 
 - [Features](#-features)
 - [Getting Started](#-getting-started)
 - [Running the Application](#-running-the-application)
 - [API Endpoints](#-api-endpoints)
+- [Security Configuration](#-security-configuration)
 - [Exception Handling](#-exception-handling)
 - [Technology Stack](#-technology-stack)
 - [License](#-license)
+
+&nbsp;
 
 ## ✨ Features
 
@@ -18,6 +23,8 @@ Welcome to the **Library Management System**! This application is built using **
 - **Patron Management**: Add, update, and delete patrons.
 - **Borrowing Records**: Track which patrons have borrowed which books, including borrow and return dates.
 - **Global Exception Handling**: Structured error responses with detailed messages.
+
+&nbsp;
 
 ## 🚀 Getting Started
 
@@ -57,6 +64,8 @@ Before you begin, ensure you have the following installed:
     mvn clean install
     ```
 
+&nbsp;
+
 ## 🏃 Running the Application
 
 You can run the application in several ways:
@@ -82,6 +91,8 @@ Once the application is running, access it at:
 ```bash
 http://localhost:8080/
 ```
+
+&nbsp;
 
 ## 🌐 API Endpoints
 
@@ -285,6 +296,30 @@ PUT /api/return/{bookId}/patron/{patronId}
 
 Request Body: JSON representation contains the return date.
 
+&nbsp;
+
+## 🔒 Security Configuration
+
+The application utilizes Spring Security to ensure robust security measures. Here’s an overview of the security setup:
+
+### 🛡️ Authentication
+
+- Basic Authentication: HTTP Basic Authentication to secure the application. Users must provide a username and password to access protected endpoints.
+
+### 🔐 Authorization
+
+- Role-Based Access Control: Access to different API endpoints is restricted based on user roles. The roles and their permissions are as follows:
+  - **USER**: Can access read-only endpoints for books.
+  - **MANAGER**: Can access read-only endpoints for patrons and records.
+  - **ADMIN**: Has full access, including create, update, and delete operations for books, patrons, and borrowing records.
+
+### 🔑 User Details Management
+- JDBC Authentication: User details and roles are managed using a JDBC-based authentication system. User credentials are stored securely with hashed passwords using Bcrypt.
+
+### 🚫 Cross-Site Request Forgery (CSRF)
+- CSRF Protection: CSRF protection is disabled for simplicity in local development. Ensure to enable CSRF protection in production environments for enhanced security.
+
+&nbsp;
 
 ## ❗ Exception Handling
 
@@ -294,6 +329,8 @@ The application uses a global exception handler to manage errors gracefully. The
 - BadRequestException: Returns a 400 status for bad requests.
 - Generic Exception: Returns a 500 status for all other unhandled exceptions.
 
+&nbsp;
+
 ## 💻 Technology Stack
 
 - Java 22
@@ -301,6 +338,8 @@ The application uses a global exception handler to manage errors gracefully. The
 - Hibernate/JPA
 - MySQL (or any other relational database)
 - Maven for dependency management
+
+&nbsp;
 
 ## 📜 License
 
